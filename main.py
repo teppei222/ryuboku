@@ -14,7 +14,7 @@ if uploaded_file is not None:
 
     canny_gray = cv2.Canny(opencv_image,100,53)
     cimg = canny_gray
-	
+
     dp=1
     minDist=42
     param1=100
@@ -48,8 +48,8 @@ if uploaded_file is not None:
         #型をfloat32からunit16に変更：整数のタイプになるので、後々トラブルが減る。
         circles = np.uint16(np.around(data_circles))
         for i in data_circles[0,:]:
-	    x=i[0]
-	    y=i[1]
+            x=i[0]
+            y=i[1]
             r=i[2]
             # 外側の円を描く
             cv2.circle(opencv_image,(x,y),r,(0,255,0),2)
@@ -59,7 +59,7 @@ if uploaded_file is not None:
     honsu = data_circles.shape[1]
 
     cv2.putText(opencv_image,
-    			str(honsu),
+                str(honsu),
                 (200,400),
                 cv2.FONT_HERSHEY_SIMPLEX,
                 11,
