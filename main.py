@@ -48,9 +48,9 @@ if uploaded_file is not None:
         #型をfloat32からunit16に変更：整数のタイプになるので、後々トラブルが減る。
         circles = np.uint16(np.around(data_circles))
         for i in data_circles[0,:]:
-            x=i[0]
-            y=i[1]
-            r=i[2]
+            x=int(i[0])
+            y=int(i[1])
+            r=int(i[2])
             # 外側の円を描く
             cv2.circle(opencv_image,(x,y),r,(0,255,0),2)
             # 中心の円を描く
