@@ -21,10 +21,10 @@ if uploaded_file is not None:
     param2=15
     minRadius=21
     maxRadius=29
-    gazou_waku_xstart=468
-    gazou_waku_xend=1487
-    gazou_waku_ystart=1051
-    gazou_waku_yend=3183
+    gazou_waku_xstart=590
+    gazou_waku_xend=2390
+    gazou_waku_ystart=1070
+    gazou_waku_yend=3250
     
     
     circles = cv2.HoughCircles(cimg,
@@ -68,5 +68,5 @@ if uploaded_file is not None:
         
 
     # Now do something with the image! For example, let's display it:
-    st.image(opencv_image, channels="BGR",width=500)
+    st.image(opencv_image, channels="BGR",width=450)
     
