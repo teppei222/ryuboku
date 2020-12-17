@@ -64,7 +64,7 @@ if uploaded_file is not None:
 
         cv2.putText(opencv_image,
                     str(honsu),
-                    (200,400),
+                    (gazou_waku_xstart,gazou_waku_ystart),
                     cv2.FONT_HERSHEY_SIMPLEX,
                     11,
                     (208,22,146),
