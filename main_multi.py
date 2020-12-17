@@ -28,10 +28,10 @@ for gazou_waku_xstart,gazou_waku_xend,gazou_waku_ystart, gazou_waku_yend in zip(
         param2=15
         minRadius=21
         maxRadius=29
-        gazou_waku_xstart=590
-        gazou_waku_xend=2390
-        gazou_waku_ystart=1070
-        gazou_waku_yend=3250
+        gazou_waku_xstart=gazou_waku_xstart
+        gazou_waku_xend=gazou_waku_xend
+        gazou_waku_ystart=azou_waku_ystart
+        gazou_waku_yend=gazou_waku_yend
 
 
         circles = cv2.HoughCircles(cimg,
