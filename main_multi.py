@@ -12,6 +12,7 @@ xstart = [0,100,200,300]
 xend = [100,200,300,400]
 ystart = [0,100,200,300]
 yend = [100,200,300,400]
+minus = 100
 
 
 if uploaded_file is not None:
@@ -64,7 +65,7 @@ if uploaded_file is not None:
 
         cv2.putText(opencv_image,
                     str(honsu),
-                    (gazou_waku_xstart,gazou_waku_ystart),
+                    (gazou_waku_xstart,gazou_waku_ystart-minus),
                     cv2.FONT_HERSHEY_SIMPLEX,
                     11,
                     (208,22,146),
