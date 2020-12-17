@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-st.title('流木解析結果_マルチ計測')
+st.title('流木解析_複数ボックス用')
 
 uploaded_file = st.sidebar.file_uploader("Choose a image file", type="jpg")
 
