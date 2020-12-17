@@ -8,10 +8,10 @@ st.title('流木解析結果')
 uploaded_file = st.sidebar.file_uploader("Choose a image file", type="jpg")
 
 
-xstart = [0,100,200,300]
-xend = [100,200,300,400]
-ystart = [0,100,200,300]
-yend = [100,200,300,400]
+xstart = [646,1710,1685,698,1705]
+xend = [1436,2389,2388,1386,2389]
+ystart = [1168,1816,1941,2592,2569]
+yend = [1797,2531,2531,3160,3167]
 minus = 100
 
 
