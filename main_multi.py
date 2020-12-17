@@ -7,44 +7,42 @@ st.title('流木解析結果')
 
 uploaded_file = st.sidebar.file_uploader("Choose a image file", type="jpg")
 
+
 xstart = [0,100,200,300]
 xend = [100,200,300,400]
 ystart = [0,100,200,300]
 yend = [100,200,300,400]
 
-for gazou_waku_xstart,gazou_waku_xend,gazou_waku_ystart, gazou_waku_yend in zip(xstart,xend,ystart,yend):
 
-    if uploaded_file is not None:
-        # Convert the file to an opencv image.
-        file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
-        opencv_image = cv2.imdecode(file_bytes, 1)
+if uploaded_file is not None:
+    # Convert the file to an opencv image.
+    file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
+    opencv_image = cv2.imdecode(file_bytes, 1)
 
-        canny_gray = cv2.Canny(opencv_image,100,53)
-        cimg = canny_gray
+    canny_gray = cv2.Canny(opencv_image,100,53)
+    cimg = canny_gray
 
-        dp=1
-        minDist=42
-        param1=100
-        param2=15
-        minRadius=21
-        maxRadius=29
-        gazou_waku_xstart=gazou_waku_xstart
-        gazou_waku_xend=gazou_waku_xend
-        gazou_waku_ystart=azou_waku_ystart
-        gazou_waku_yend=gazou_waku_yend
+    dp=1
+    minDist=42
+    param1=100
+    param2=15
+    minRadius=21
+    maxRadius=29
 
+    
+    circles = cv2.HoughCircles(cimg,
+                               cv2.HOUGH_GRADIENT,
+                               dp=dp,
+                               minDist=minDist,
+                               param1=param1,
+                               param2=param2,
+                               minRadius=minRadius,
+                               maxRadius=maxRadius)
 
-        circles = cv2.HoughCircles(cimg,
-                                   cv2.HOUGH_GRADIENT,
-                                   dp=dp,
-                                   minDist=minDist,
-                                   param1=param1,
-                                   param2=param2,
-                                   minRadius=minRadius,
-                                   maxRadius=maxRadius)
+    data = circles.reshape(-1,3)
+    df = pd.DataFrame(data,columns = ['a','b','c'])
 
-        data = circles.reshape(-1,3)
-        df = pd.DataFrame(data,columns = ['a','b','c'])
+    for gazou_waku_xstart,gazou_waku_xend,gazou_waku_ystart, gazou_waku_yend in zip(xstart,xend,ystart,yend):
         df = df.query('@gazou_waku_xstart < a < @gazou_waku_xend')
         df = df.query('@gazou_waku_ystart < b < @gazou_waku_yend')
         df = df.values
@@ -72,7 +70,7 @@ for gazou_waku_xstart,gazou_waku_xend,gazou_waku_ystart, gazou_waku_yend in zip(
                     11,
                     (208,22,146),
                     10)
+        
 
-
-# Now do something with the image! For example, let's display it:
-st.image(opencv_image, channels="BGR",width=450)
+    # Now do something with the image! For example, let's display it:
+    st.image(opencv_image, channels="BGR",width=450)
