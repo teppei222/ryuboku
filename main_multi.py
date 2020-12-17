@@ -40,9 +40,8 @@ if uploaded_file is not None:
                                maxRadius=maxRadius)
 
     data = circles.reshape(-1,3)
-    df = pd.DataFrame(data,columns = ['a','b','c'])
-
     for gazou_waku_xstart,gazou_waku_xend,gazou_waku_ystart, gazou_waku_yend in zip(xstart,xend,ystart,yend):
+        df = pd.DataFrame(data,columns = ['a','b','c'])
         df = df.query('@gazou_waku_xstart < a < @gazou_waku_xend')
         df = df.query('@gazou_waku_ystart < b < @gazou_waku_yend')
         df = df.values
