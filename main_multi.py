@@ -8,7 +8,7 @@ st.title('流木解析_複数ボックス用')
 uploaded_file = st.sidebar.file_uploader("Choose a image file", type="jpg")
 
 
-xstart = [643,1650,682,1694,709,1633]
+xstart = [709,1650,709,1694,709,1633]
 xend = [1463,2469,1413,2431,1430,2425]
 ystart = [1094,1100,1903,1903,2590,2590]
 yend = [1705,1688,2519,2546,3173,3179]
