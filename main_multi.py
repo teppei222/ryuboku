@@ -12,7 +12,7 @@ xstart = [646,1710,1685,698,1705]
 xend = [1436,2389,2388,1386,2389]
 ystart = [1168,1816,1941,2592,2569]
 yend = [1797,2531,2531,3160,3167]
-minus = 100
+minus = 50
 
 
 if uploaded_file is not None:
@@ -67,7 +67,7 @@ if uploaded_file is not None:
                     str(honsu),
                     (gazou_waku_xstart,gazou_waku_ystart-minus),
                     cv2.FONT_HERSHEY_SIMPLEX,
-                    11,
+                    8,
                     (208,22,146),
                     10)
         
