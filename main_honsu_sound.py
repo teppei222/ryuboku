@@ -64,7 +64,7 @@ if uploaded_file is not None:
     mytext = str(honsu) + '本です'
     tts = gTTS(text=mytext, lang='ja')
     tts.save('./honsu.mp3')
-    os.system("honsu.mp3")
+    os.system("./honsu.mp3")
     
     cv2.putText(opencv_image,
                 str(honsu),
