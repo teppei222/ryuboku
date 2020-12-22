@@ -59,11 +59,6 @@ if uploaded_file is not None:
             cv2.circle(opencv_image,(x,y),5,(208,22,146),-1)
 
     honsu = data_circles.shape[1]
-    
-	mytext = str(honsu) + '本です'
-	tts = gTTS(text=mytext, lang='ja')
-	tts.save('./honsu.mp3')
-
     cv2.putText(opencv_image,
                 str(honsu),
                 (200,400),
@@ -75,4 +70,8 @@ if uploaded_file is not None:
 
     # Now do something with the image! For example, let's display it:
     st.image(opencv_image, channels="BGR",width=450)
-	playsound('./honsu.mp3')
+	
+mytext = str(honsu) + '本です'
+tts = gTTS(text=mytext, lang='ja')
+tts.save('./honsu.mp3')
+playsound('./honsu.mp3')
