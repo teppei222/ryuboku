@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 from gtts import gTTS
-from playsound import playsound
 
 st.title('流木解析結果_話しかける')
 
