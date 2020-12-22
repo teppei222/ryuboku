@@ -3,7 +3,8 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 from gtts import gTTS
-from playsound import playsound
+from pydub import AudioSegment
+from pydub.playback import play
 
 st.title('流木解析結果_話しかける')
 
@@ -64,7 +65,10 @@ if uploaded_file is not None:
     mytext = str(honsu) + '本です'
     tts = gTTS(text=mytext, lang='ja')
     tts.save('./honsu.mp3')
-    playsound('./honsu.mp3')
+    # 音声ファイルの読み込み
+    sound = AudioSegment.from_file("./honsu.mp3", "mp3")
+    # 再生
+    play(sound)
     
     cv2.putText(opencv_image,
                 str(honsu),
