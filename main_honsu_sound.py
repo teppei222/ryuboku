@@ -62,7 +62,7 @@ if uploaded_file is not None:
     mytext = str(honsu) + '本です'
     tts = gTTS(text=mytext, lang='ja')
     tts.save('honsu.mp3')
-    audio_file = open(‘honsu.mp3’, ‘rb’)
+    audio_file = open('honsu.mp3', ‘rb’)
     audio_bytes = audio_file.read()
     st.audio(audio_bytes, format=‘audio/ogg’,start_time=0)
     
@@ -79,4 +79,3 @@ if uploaded_file is not None:
 
     # Now do something with the image! For example, let's display it:
     st.image(opencv_image, channels="BGR",width=450)
-	playsound('./honsu.mp3')
