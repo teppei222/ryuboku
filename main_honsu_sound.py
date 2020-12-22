@@ -59,6 +59,7 @@ if uploaded_file is not None:
             cv2.circle(opencv_image,(x,y),5,(208,22,146),-1)
 
     honsu = data_circles.shape[1]
+    st.write(os.getcwd())
     
     #　音声読み上げ
     mytext = str(honsu) + '本です'
