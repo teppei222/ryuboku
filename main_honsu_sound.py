@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 from gtts import gTTS
 
-st.title('流木解析結果_話しかける')
+st.title('流木解析結果_本数答える')
 
 uploaded_file = st.sidebar.file_uploader("Choose a image file", type="jpg")
 
@@ -60,9 +60,10 @@ if uploaded_file is not None:
     honsu = data_circles.shape[1]
     
     mytext = str(honsu) +'本です'
+    st.write(mytext)
     tts = gTTS(text=mytext,lang='ja')
-    tts.save('./honsu.mp3')
-    audio_file = open('./honsu.mp3','rb')
+    tts.save('honsu.mp3')
+    audio_file = open('honsu.mp3','rb')
     audio_bytes = audio_file.read()
     st.audio(audio_bytes, format='audio/ogg',start_time=0)
     
