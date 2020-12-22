@@ -2,6 +2,3 @@ streamlit
 numpy
 opencv-python--headless
 pandas
-gtts
-os
-playsound
