@@ -59,7 +59,7 @@ if uploaded_file is not None:
 
     honsu = data_circles.shape[1]
     
-    mytext = '木の本数は' + str(honsu) +'本だよ、'
+    mytext = '本数は' + str(honsu) +'本だよ、'
     tts = gTTS(text=mytext,lang='ja')
     tts.save('honsu.mp3')
     audio_file = open('honsu.mp3','rb')
