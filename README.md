@@ -1,3 +1,5 @@
+I made it for practice of Streamlit.
+
 A program that measures the number of round bars from an image
 When you put an image in the sidebar, 
 the analysis result is displayed on the screen on the right.
