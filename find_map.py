@@ -1,5 +1,8 @@
 import pandas as pd
 import streamlit as st
+import pydeck as pdk
+import streamlit.components.v1 as components
+import numpy as np
 
 df_header = pd.read_csv('./DB2.csv',encoding="cp932")
 df = df_header.set_index('ID')
@@ -23,5 +26,33 @@ else:
     selected_options_basho =  container_b.multiselect("型式を選んでください:",basho)
 df = df[df['型式'].isin(selected_options_basho)]
 st.header('該当施設検索')
-st.map(df)
 st.table(df)
+
+midpoint = (np.average(df['lon']), np.average(df['lat']))
+
+tooltip = {
+    "html": "{堰堤名}",
+    "style": {"background": "grey", "color": "white", "font-family": '"Helvetica Neue", Arial', "z-index": "1000"},
+}
+
+layer = pdk.Layer(
+    'ScatterplotLayer',
+    df,
+    get_position=['lon','lat'],
+    auto_highlight=True,
+    get_radius='300',
+    get_fill_color='[160, 0, 200, 140]',
+    pickable=True)
+
+view_state = pdk.ViewState(
+    longitude=midpoint[0],
+    latitude=midpoint[1],
+    zoom=11,
+    min_zoom=5,
+    max_zoom=15,
+    pitch=0,
+    bearing=0)
+
+r = pdk.Deck(map_style ="road", layers=layer, initial_view_state=view_state,tooltip = tooltip)
+deck_map = r.to_html(as_string=True)
+st.components.v1.html(deck_map,width=800, height=600) 
