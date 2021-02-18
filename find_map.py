@@ -40,15 +40,15 @@ layer = pdk.Layer(
     df,
     get_position=['lon','lat'],
     auto_highlight=True,
-    get_radius='3000',
+    get_radius='2000',
     get_fill_color='[160, 0, 200, 140]',
     pickable=True)
 
 view_state = pdk.ViewState(
     longitude=midpoint[0],
     latitude=midpoint[1],
-    zoom=5,
-    min_zoom=5,
+    zoom=7,
+    min_zoom=7,
     max_zoom=15,
     pitch=0,
     bearing=0)
