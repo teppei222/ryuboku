@@ -29,7 +29,7 @@ df = df[df['型式'].isin(selected_options_basho)]
 
 name = df["堰堤名"].unique().tolist()
 container_c = st.sidebar.beta_container()
-selected_options_name =  container_c.multiselect("堰堤を選んでください:",name,name)
+selected_options_name =  container_c.multiselect("堰堤を選んでください:",name)
 df = df[df['堰堤名'].isin(selected_options_name)]
 
 
@@ -48,7 +48,7 @@ layer = pdk.Layer(
     df,
     get_position=['lon','lat'],
     auto_highlight=True,
-    get_radius='300',
+    get_radius='200',
     get_fill_color='[160, 0, 200, 140]',
     pickable=True)
 
