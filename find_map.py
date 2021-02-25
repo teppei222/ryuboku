@@ -25,6 +25,13 @@ if all_b:
 else:
     selected_options_basho =  container_b.multiselect("型式を選んでください:",basho)
 df = df[df['型式'].isin(selected_options_basho)]
+
+name = df["堰堤名"].unique().tolist()
+container_c = st.sidebar.beta_container()
+selected_options_name = container_b.multiselect("堰堤名を選んでください:",name)
+df = df[df['name'].isin(selected_options_name)]
+
+
 st.header('該当施設検索')
 st.table(df)
 
