@@ -26,11 +26,15 @@ else:
     selected_options_basho =  container_b.multiselect("型式を選んでください:",basho)
 df = df[df['型式'].isin(selected_options_basho)]
 
-name = df["堰堤名"].unique().tolist()
-st.write(name)
+
+basho = df["堰堤名"].unique().tolist()
 container_c = st.sidebar.beta_container()
-selected_options_name = container_c.multiselect("堰堤名を選んでください:",name)
-df = df[df['name'].isin(selected_options_name)]
+all_c = st.sidebar.checkbox("すべて選択",key="3")
+if all_c:
+    selected_options_name = container_c.multiselect("堰堤を選んでください:",name,name)
+else:
+    selected_options_name =  container_c.multiselect("堰堤を選んでください:",name)
+df = df[df['堰堤名'].isin(selected_options_name)]
 
 
 st.header('該当施設検索')
