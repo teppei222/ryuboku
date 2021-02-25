@@ -29,16 +29,12 @@ df = df[df['型式'].isin(selected_options_basho)]
 
 name = df["堰堤名"].unique().tolist()
 container_c = st.sidebar.beta_container()
-all_c = st.sidebar.checkbox("すべて選択",key="3")
-if all_c:
-    selected_options_name = container_c.multiselect("堰堤を選んでください:",name,name)
-else:
-    selected_options_name =  container_c.multiselect("堰堤を選んでください:",name)
+selected_options_name =  container_c.multiselect("堰堤を選んでください:",name,name)
 df = df[df['堰堤名'].isin(selected_options_name)]
 
 
 st.header('該当施設検索')
-st.write(df)
+st.table(df)
 
 midpoint = (np.average(df['lon']), np.average(df['lat']))
 
