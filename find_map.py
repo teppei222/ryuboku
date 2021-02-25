@@ -27,7 +27,7 @@ else:
 df = df[df['型式'].isin(selected_options_basho)]
 
 
-basho = df["堰堤名"].unique().tolist()
+name = df["堰堤名"].unique().tolist()
 container_c = st.sidebar.beta_container()
 all_c = st.sidebar.checkbox("すべて選択",key="3")
 if all_c:
