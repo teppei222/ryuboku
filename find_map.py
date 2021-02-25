@@ -33,7 +33,7 @@ df = df[df['name'].isin(selected_options_name)]
 
 
 st.header('該当施設検索')
-st.table(df)
+st.write(df)
 
 midpoint = (np.average(df['lon']), np.average(df['lat']))
 
