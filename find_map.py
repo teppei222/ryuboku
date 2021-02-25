@@ -27,6 +27,7 @@ else:
 df = df[df['型式'].isin(selected_options_basho)]
 
 name = df["堰堤名"].unique().tolist()
+st.write(name)
 container_c = st.sidebar.beta_container()
 selected_options_name = container_c.multiselect("堰堤名を選んでください:",name)
 df = df[df['name'].isin(selected_options_name)]
