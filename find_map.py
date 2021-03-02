@@ -55,9 +55,9 @@ layer = pdk.Layer(
 view_state = pdk.ViewState(
     longitude=midpoint[0],
     latitude=midpoint[1],
-    zoom=11,
+    zoom=14,
     min_zoom=3,
-    max_zoom=15,
+    max_zoom=20,
     pitch=0,
     bearing=0)
 
