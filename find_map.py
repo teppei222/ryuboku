@@ -48,7 +48,7 @@ layer = pdk.Layer(
     df,
     get_position=['lon','lat'],
     auto_highlight=True,
-    get_radius='80',
+    get_radius='50',
     get_fill_color='[160, 0, 200, 140]',
     pickable=True)
 
