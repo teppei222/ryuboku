@@ -3,9 +3,9 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-st.title('流木解析結果')
+st.title('一括　流木解析結果')
 
-uploaded_file = st.sidebar.file_uploader("Choose a image file", type="jpg")
+uploaded_file = st.sidebar.file_uploader("画像ファイルを選択してください", type="jpg")
 
 if uploaded_file is not None:
     # Convert the file to an opencv image.
