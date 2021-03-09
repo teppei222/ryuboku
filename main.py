@@ -8,7 +8,7 @@ dt_now = datetime.datetime.now()
 
 
 st.title('一括　流木解析結果')
-st.(dt_now)
+st.title(dt_now)
 
 uploaded_file = st.sidebar.file_uploader("画像ファイルを選択してください", type="jpg")
 
