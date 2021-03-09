@@ -2,8 +2,16 @@ import cv2
 import numpy as np
 import pandas as pd
 import streamlit as st
+import datetime
+
+dt_now = datetime.datetime.now(
+    datetime.timezone(datetime.timedelta(hours=9))
+)
+
+
 
 st.title('流木解析_複数ボックス用')
+st.title(dt_now.strftime('%Y年%m月%d日 %H:%M:%S'))
 
 uploaded_file = st.sidebar.file_uploader("画像ファイルを選択してください。", type="jpg")
 
