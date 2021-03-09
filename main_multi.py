@@ -5,7 +5,7 @@ import streamlit as st
 
 st.title('流木解析_複数ボックス用')
 
-uploaded_file = st.sidebar.file_uploader("Choose a image file", type="jpg")
+uploaded_file = st.sidebar.file_uploader("画像ファイルを選択してください。", type="jpg")
 
 
 xstart = [709,1650,709,1694,709,1633]
