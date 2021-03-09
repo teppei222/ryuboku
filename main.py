@@ -4,7 +4,10 @@ import pandas as pd
 import streamlit as st
 import datetime
 
-dt_now = datetime.datetime.now()
+dt_now = datetime.datetime.now(
+    datetime.timezone(datetime.timedelta(hours=9))
+)
+
 
 
 st.title('一括　流木解析結果')
