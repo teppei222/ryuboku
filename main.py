@@ -4,9 +4,11 @@ import pandas as pd
 import streamlit as st
 import datetime
 
-st.title('一括　流木解析結果')
 dt_now = datetime.datetime.now()
-st.write(dt_now)
+
+
+st.title('一括　流木解析結果')
+st.(dt_now)
 
 uploaded_file = st.sidebar.file_uploader("画像ファイルを選択してください", type="jpg")
 
