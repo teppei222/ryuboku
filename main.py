@@ -9,7 +9,7 @@ dt_now = datetime.datetime.now(
 )
 
 st.title('一括　流木解析結果')
-st.subheader(dt_now.strftime('%Y年%m月%d日 %H:%M:%S'))
+st.header(dt_now.strftime('%Y年%m月%d日 %H:%M:%S'))
 
 uploaded_file = st.sidebar.file_uploader("画像ファイルを選択してください", type="jpg")
 
