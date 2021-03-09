@@ -10,7 +10,7 @@ dt_now = datetime.datetime.now(
 
 st.title('流木解析_複数ボックス用')
 st.header('')
-st.header(dt_now.strftime('%Y年%m月%d日 %H:%M:%S'))
+st.header(dt_now.strftime('%Y年%m月%d日 %H:%M'))
 
 uploaded_file = st.sidebar.file_uploader("画像ファイルを選択してください。", type="jpg")
 
