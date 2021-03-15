@@ -76,7 +76,7 @@ if uploaded_file is not None:
                     cv2.FONT_HERSHEY_SIMPLEX,
                     6,
                     (208,22,146),
-                    10)
+                    22)
         
 
     # Now do something with the image! For example, let's display it:
