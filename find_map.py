@@ -4,30 +4,6 @@ import pydeck as pdk
 import streamlit.components.v1 as components
 import numpy as np
 
-# Everything in this section will be available as an environment variable 
-db_username = "Jane"
-db_password = "12345qwerty"
-
-# You can also add other sections if you like.
-# The contents of sections as shown below will not become environment variables,
-# but they'll be easily accessible from within Streamlit anyway as we show
-# later in this doc.   
-[my_cool_secrets]
-things_i_like = ["Streamlit", "Python"]
-
-
-# Everything is accessible via the st.secrets dict:
-
-st.write("DB username:", st.secrets["db_username"])
-st.write("DB password:", st.secrets["db_password"])
-st.write("My cool secrets:", st.secrets["my_cool_secrets"]["things_i_like"])
-
-# And the root-level secrets are also accessible as environment variables:
-
-import os
-st.write(
-	"Has environment variables been set:",
-	os.environ["db_username"] == st.secrets["db_username"])
 
 
 
