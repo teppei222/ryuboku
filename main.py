@@ -26,7 +26,7 @@ if uploaded_file is not None:
     param1=100
     param2=15
     minRadius=18
-    maxRadius=29
+    maxRadius=26
     gazou_waku_xstart=590
     gazou_waku_xend=2390
     gazou_waku_ystart=1070
