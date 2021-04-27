@@ -25,8 +25,8 @@ if uploaded_file is not None:
     minDist=42
     param1=100
     param2=15
-    minRadius=17
-    maxRadius=26
+    minRadius=18
+    maxRadius=29
     gazou_waku_xstart=590
     gazou_waku_xend=2390
     gazou_waku_ystart=1070
