@@ -8,7 +8,7 @@ dt_now = datetime.datetime.now(
     datetime.timezone(datetime.timedelta(hours=9))
 )
 
-st.title('流木解析_複数ボックス用')
+st.title('流木解析_複数ボックスP')
 st.header('')
 st.header(dt_now.strftime('%Y年%m月%d日 %H:%M'))
 
