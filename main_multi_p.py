@@ -64,9 +64,9 @@ if uploaded_file is not None:
                 y=int(i[1])
                 r=int(i[2])
                 # 外側の円を描く
-                cv2.circle(opencv_image,(x,y),r,(0,255,0),2)
+                cv2.circle(opencv_image,(x,y),r,(255,255,255),2)
                 # 中心の円を描く
-                cv2.circle(opencv_image,(x,y),5,(208,22,146),-1)
+                cv2.circle(opencv_image,(x,y),5,(255,255,255),-1)
 
         honsu = data_circles.shape[1]
 
