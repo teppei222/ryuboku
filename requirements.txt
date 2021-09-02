@@ -4,3 +4,4 @@ opencv-python--headless
 pandas
 gtts
 pydeck
+plotly
