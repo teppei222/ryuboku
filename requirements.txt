@@ -6,3 +6,4 @@ gtts
 pydeck
 plotly
 scipy
+openpyxl
