@@ -7,3 +7,4 @@ pydeck
 plotly
 scipy
 openpyxl
+streamlit-plotly-events
