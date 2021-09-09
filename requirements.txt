@@ -8,3 +8,4 @@ plotly
 scipy
 openpyxl
 streamlit-plotly-events
+pywin32
