@@ -4,3 +4,4 @@ opencv-python--headless
 pandas
 gtts
 pydeck
+protobuf==3.20.0
